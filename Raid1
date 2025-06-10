@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Stratégie - Nom du Raid 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="back-home">← Retour à l'accueil</a>
+    <h1>Stratégie : Nom du Raid 1</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Présentation du Raid</h2>
+      <img src="assets/raid1.jpg" alt="Nom du Raid 1" class="banner-img">
+      <p>[Décris ici le contexte du raid, les prérequis, etc.]</p>
+    </section>
+    <section>
+      <h2>Stratégie étape par étape</h2>
+      <ol>
+        <li>
+          <strong>Phase 1 :</strong> [Explique la mécanique, ajoute une image si besoin]<br>
+          <img src="assets/raid1_step1.jpg" alt="Phase 1" class="step-img">
+        </li>
+        <li>
+          <strong>Phase 2 :</strong> [Etc.]<br>
+          <img src="assets/raid1_step2.jpg" alt="Phase 2" class="step-img">
+        </li>
+        <!-- Ajoute d'autres étapes -->
+      </ol>
+    </section>
+  </main>
+  <footer>
+    <a href="index.html">Retour à l'accueil</a>
+  </footer>
+</body>
+</html>
