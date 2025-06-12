@@ -183,16 +183,16 @@ main {
   box-shadow: none;
   background: transparent;
   border: none;
-  filter: brightness(0.98);
+  filter: brightness(0.98) scale(1.2);
   transition: 
     filter 0.5s cubic-bezier(.8,0,.2,1),
     transform 0.5s cubic-bezier(.8,0,.2,1);
 }
 .carousel-slide.active img {
-  filter: brightness(1.13) drop-shadow(0 0 18px #f9e8a988);
+  filter: brightness(1.13) drop-shadow(0 0 18px #f9e8a988) scale(1.2);
 }
 .carousel-slide.active img:hover {
-  filter: brightness(1.22) drop-shadow(0 0 22px #ffb5f7cc);
+  filter: brightness(1.22) drop-shadow(0 0 22px #ffb5f7cc) scale(1.2);
   transform: scale(1.07) rotate(-1.0deg);
 }
 .carousel-caption {
