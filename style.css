@@ -104,7 +104,7 @@ main {
   flex: 1 0 auto;
 }
 
-/* Taille du cadre adaptée au carrousel, hauteurs égales en haut et en bas, +20% */
+/* Taille du cadre adaptée au carrousel, hauteurs égales en haut et en bas, taille raisonnable */
 .glass-container {
   background: linear-gradient(135deg, #262b5ed6 0%, #36425ed0 38%, #b6aaf1c5 70%, #2c1d3acc 100%);
   box-shadow: 0 9.6px 72px 0 rgba(54,80,170,0.28), 0 1.8px 9.6px 0 rgba(120,0,255,0.12);
@@ -112,11 +112,11 @@ main {
   border: 2.64px solid rgba(255,255,255,0.12);
   backdrop-filter: blur(33.6px) saturate(160%);
   -webkit-backdrop-filter: blur(33.6px) saturate(160%);
-  padding: 72px;
-  max-width: calc(1000px + 2*72px + 2*60px);
-  min-width: calc(1000px + 2*72px + 2*60px);
+  padding: 50px;
+  max-width: 520px;
+  min-width: 420px;
   width: auto;
-  min-height: calc(1200px + 2*72px);
+  min-height: 440px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,8 +128,8 @@ main {
 
 .carousel {
   position: relative;
-  width: 1000px;
-  height: 1200px;
+  width: 320px;
+  height: 380px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -179,15 +179,15 @@ main {
   z-index: 2;
 }
 .carousel-slide img {
-  width: 150px;
-  height: 180px;
+  width: 140px;
+  height: 170px;
   object-fit: contain;
   border-radius: 0;
   box-shadow: none;
   background: transparent;
   border: none;
   /* Zoom x2.1 */
-  transform: scale(2.1);
+  transform: scale(2.05);
   filter: brightness(0.98);
   transition: 
     filter 0.5s cubic-bezier(.8,0,.2,1),
@@ -195,11 +195,11 @@ main {
 }
 .carousel-slide.active img {
   filter: brightness(1.13) drop-shadow(0 0 21.6px #f9e8a988);
-  transform: scale(2.1);
+  transform: scale(2.05);
 }
 .carousel-slide.active img:hover {
   filter: brightness(1.22) drop-shadow(0 0 26.4px #ffb5f7cc);
-  transform: scale(2.35); /* zoom uniquement, pas de rotation */
+  transform: scale(2.28); /* zoom uniquement, pas de rotation */
 }
 .carousel-caption {
   display: none;
@@ -228,11 +228,11 @@ main {
   opacity: 0.8;
 }
 .carousel-arrow.left {
-  left: -72px;
+  left: -50px;
   right: auto;
 }
 .carousel-arrow.right {
-  right: -72px;
+  right: -50px;
   left: auto;
 }
 .carousel-arrow:hover, .carousel-arrow:active {
@@ -246,7 +246,7 @@ main {
   header p { font-size: 1rem; }
   .glass-container { max-width: 99vw; padding: 20px 1vw 20px 1vw; min-height: 210px;}
   .carousel { width: 96vw; max-width: 192px; height: 84px;}
-  .carousel-slide img { width: 48px; height: 58px; transform: scale(2.1);}
+  .carousel-slide img { width: 48px; height: 58px; transform: scale(2.05);}
   .carousel-arrow { width: 29px; font-size: 1.32em; }
   .carousel-arrow.left { left: -10px;}
   .carousel-arrow.right { right: -10px;}
