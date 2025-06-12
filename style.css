@@ -104,7 +104,7 @@ main {
   flex: 1 0 auto;
 }
 
-/* Taille du cadre adaptée au carrousel */
+/* Taille du cadre adaptée au carrousel, hauteurs égales en haut et en bas */
 .glass-container {
   background: linear-gradient(135deg, #262b5ed6 0%, #36425ed0 38%, #b6aaf1c5 70%, #2c1d3acc 100%);
   box-shadow: 0 8px 60px 0 rgba(54,80,170,0.28), 0 1.5px 8px 0 rgba(120,0,255,0.12);
@@ -112,7 +112,8 @@ main {
   border: 2.2px solid rgba(255,255,255,0.12);
   backdrop-filter: blur(28px) saturate(160%);
   -webkit-backdrop-filter: blur(28px) saturate(160%);
-  padding: 40px 0px;
+  /* On centre verticalement le carousel dans le cadre avec du padding égal en haut et en bas */
+  padding: 60px 0;
   margin: 0 auto 54px auto;
   max-width: 520px;
   width: 98vw;
@@ -120,8 +121,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* Ajouté pour centrer */
   z-index: 4;
   position: relative;
+  box-sizing: border-box;
 }
 
 .carousel {
@@ -241,7 +244,7 @@ main {
 @media (max-width: 700px) {
   header h1 { font-size: 1.25rem; }
   header p { font-size: 0.82rem; }
-  .glass-container { max-width: 99vw; padding: 8px 1vw 15px 1vw; min-height: 180px;}
+  .glass-container { max-width: 99vw; padding: 16px 1vw 16px 1vw; min-height: 180px;}
   .carousel { width: 96vw; max-width: 160px; height: 70px;}
   .carousel-slide img { width: 40px; height: 40px; transform: scale(2);}
   .carousel-arrow { width: 24px; font-size: 1.1em; }
