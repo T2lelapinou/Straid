@@ -147,7 +147,7 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.69);
+  transform: translate(-50%, -50%) scale(2.0);
   opacity: 0.14;
   z-index: 1;
   transition: 
