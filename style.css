@@ -1,3 +1,4 @@
+```css name=style.css
 html, body {
   height: 100%;
   width: 100%;
@@ -71,27 +72,27 @@ body {
 header {
   width: 100%;
   text-align: center;
-  margin-top: 54px;
-  margin-bottom: 38px;
+  margin-top: 65px;    /* +20% */
+  margin-bottom: 46px; /* +20% */
   z-index: 4;
   position: relative;
 }
 header h1 {
   font-family: 'Bebas Neue', Arial, sans-serif;
-  font-size: 4.2rem;
+  font-size: 5.04rem; /* +20% */
   color: #baccff;
   letter-spacing: 0.13em;
   margin: 0;
   text-transform: uppercase;
-  text-shadow: 0 6px 30px #142a42, 0 1.5px 6px #ffb5f799;
+  text-shadow: 0 7.2px 36px #142a42, 0 1.8px 7.2px #ffb5f799;
 }
 header p {
-  font-size: 2.1rem;
+  font-size: 2.52rem; /* +20% */
   color: #c1bfff;
-  margin: 10px 0 0 0;
+  margin: 12px 0 0 0;
   text-transform: uppercase;
   font-family: 'Bebas Neue', Arial, sans-serif;
-  text-shadow: 0 2px 24px #001f4e88;
+  text-shadow: 0 2.4px 28.8px #001f4e88;
 }
 
 main {
@@ -104,24 +105,23 @@ main {
   flex: 1 0 auto;
 }
 
-/* Taille du cadre adaptée au carrousel, hauteurs égales en haut et en bas */
+/* Taille du cadre adaptée au carrousel, hauteurs égales en haut et en bas, +20% */
 .glass-container {
   background: linear-gradient(135deg, #262b5ed6 0%, #36425ed0 38%, #b6aaf1c5 70%, #2c1d3acc 100%);
-  box-shadow: 0 8px 60px 0 rgba(54,80,170,0.28), 0 1.5px 8px 0 rgba(120,0,255,0.12);
-  border-radius: 40px;
-  border: 2.2px solid rgba(255,255,255,0.12);
-  backdrop-filter: blur(28px) saturate(160%);
-  -webkit-backdrop-filter: blur(28px) saturate(160%);
-  /* On centre verticalement le carousel dans le cadre avec du padding égal en haut et en bas */
-  padding: 60px 0;
-  margin: 0 auto 54px auto;
-  max-width: 520px;
+  box-shadow: 0 9.6px 72px 0 rgba(54,80,170,0.28), 0 1.8px 9.6px 0 rgba(120,0,255,0.12);
+  border-radius: 48px; /* +20% */
+  border: 2.64px solid rgba(255,255,255,0.12); /* +20% */
+  backdrop-filter: blur(33.6px) saturate(160%);
+  -webkit-backdrop-filter: blur(33.6px) saturate(160%);
+  padding: 72px 0; /* +20% */
+  margin: 0 auto 65px auto; /* +20% */
+  max-width: 624px; /* +20% */
   width: 98vw;
-  min-height: 340px;
+  min-height: 408px; /* +20% */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Ajouté pour centrer */
+  justify-content: center;
   z-index: 4;
   position: relative;
   box-sizing: border-box;
@@ -129,8 +129,8 @@ main {
 
 .carousel {
   position: relative;
-  width: 350px;
-  height: 240px;
+  width: 420px;   /* +20% */
+  height: 288px;  /* +20% */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,8 +180,8 @@ main {
   z-index: 2;
 }
 .carousel-slide img {
-  width: 110px;
-  height: 110px;
+  width: 132px;  /* +20% */
+  height: 132px; /* +20% */
   object-fit: contain;
   border-radius: 0;
   box-shadow: none;
@@ -195,11 +195,11 @@ main {
     transform 0.5s cubic-bezier(.8,0,.2,1);
 }
 .carousel-slide.active img {
-  filter: brightness(1.13) drop-shadow(0 0 18px #f9e8a988);
+  filter: brightness(1.13) drop-shadow(0 0 21.6px #f9e8a988);
   transform: scale(2);
 }
 .carousel-slide.active img:hover {
-  filter: brightness(1.22) drop-shadow(0 0 22px #ffb5f7cc);
+  filter: brightness(1.22) drop-shadow(0 0 26.4px #ffb5f7cc);
   transform: scale(2.25); /* Zoom uniquement, pas de rotation */
 }
 .carousel-caption {
@@ -211,29 +211,29 @@ main {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 50px;
+  width: 60px; /* +20% */
   height: 100%;
   background: rgba(200, 220, 255, 0.16);
   border: none;
   color: #baccff;
-  font-size: 2em;
+  font-size: 2.4em; /* +20% */
   cursor: pointer;
   user-select: none;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 14.4px; /* +20% */
   outline: none;
   transition: background 0.18s, color 0.18s;
   opacity: 0.8;
 }
 .carousel-arrow.left {
-  left: -60px;
+  left: -72px; /* +20% */
   right: auto;
 }
 .carousel-arrow.right {
-  right: -60px;
+  right: -72px; /* +20% */
   left: auto;
 }
 .carousel-arrow:hover, .carousel-arrow:active {
@@ -241,23 +241,24 @@ main {
   color: #fff;
   opacity: 1;
 }
+
 @media (max-width: 700px) {
-  header h1 { font-size: 1.25rem; }
-  header p { font-size: 0.82rem; }
-  .glass-container { max-width: 99vw; padding: 16px 1vw 16px 1vw; min-height: 180px;}
-  .carousel { width: 96vw; max-width: 160px; height: 70px;}
-  .carousel-slide img { width: 40px; height: 40px; transform: scale(2);}
-  .carousel-arrow { width: 24px; font-size: 1.1em; }
-  .carousel-arrow.left { left: -8px;}
-  .carousel-arrow.right { right: -8px;}
+  header h1 { font-size: 1.5rem; }
+  header p { font-size: 1rem; }
+  .glass-container { max-width: 99vw; padding: 20px 1vw 20px 1vw; min-height: 210px;}
+  .carousel { width: 96vw; max-width: 192px; height: 84px;}
+  .carousel-slide img { width: 48px; height: 48px; transform: scale(2);}
+  .carousel-arrow { width: 29px; font-size: 1.32em; }
+  .carousel-arrow.left { left: -10px;}
+  .carousel-arrow.right { right: -10px;}
 }
 footer {
   width: 100vw;
   text-align: center;
   margin-top: auto;
-  padding: 24px 0 16px 0;
+  padding: 28.8px 0 19.2px 0; /* +20% */
   color: #b3b3e5;
-  font-size: 1.23rem;
+  font-size: 1.48rem; /* +20% */
   font-family: 'Bebas Neue', Arial, sans-serif;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -271,3 +272,4 @@ footer {
   background: rgba(11, 16, 75, 0.7);
   backdrop-filter: blur(8px);
 }
+```
