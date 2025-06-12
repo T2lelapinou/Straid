@@ -14,6 +14,8 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .space-bg {
   min-height: 100vh;
@@ -22,8 +24,10 @@ body {
   overflow: hidden;
   background: linear-gradient(120deg, #0b104b 0%, #191935 48%, #32054a 100%);
   z-index: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
 }
-/* Flou gaussien sur tout l'arrière-plan spatial */
 .space-bg::before {
   content: "";
   position: absolute;
@@ -97,6 +101,7 @@ main {
   align-items: center;
   z-index: 4;
   position: relative;
+  flex: 1 0 auto;
 }
 
 .glass-container {
@@ -106,7 +111,7 @@ main {
   border: 2.2px solid rgba(255,255,255,0.12);
   backdrop-filter: blur(28px) saturate(160%);
   -webkit-backdrop-filter: blur(28px) saturate(160%);
-  padding: 40px 16px 40px 16px;
+  padding: 40px 16px;
   margin: 0 auto 54px auto;
   max-width: 600px;
   width: 97vw;
@@ -173,13 +178,13 @@ main {
   width: 145px;
   height: 145px;
   object-fit: contain;
-  border-radius: 1.2rem;
-  box-shadow: 0 8px 30px #19337070, 0 1.5px 7px 0 #ffb5f799;
+  /* Suppression du cadre arrondi */
+  border-radius: 0;
+  box-shadow: none;
   background: transparent;
-  border: 1.6px solid rgba(255,255,255,0.18);
-  filter: brightness(0.92) blur(0.4px);
+  border: none;
+  filter: brightness(0.98);
   transition: 
-    box-shadow 0.4s cubic-bezier(.8,0,.2,1),
     filter 0.5s cubic-bezier(.8,0,.2,1),
     transform 0.5s cubic-bezier(.8,0,.2,1);
 }
@@ -187,21 +192,11 @@ main {
   filter: brightness(1.13) drop-shadow(0 0 18px #f9e8a988);
 }
 .carousel-slide.active img:hover {
-  filter: brightness(1.22) drop-shadow(0 0 22px #ffb5f7cc) blur(0.1px);
+  filter: brightness(1.22) drop-shadow(0 0 22px #ffb5f7cc);
   transform: scale(1.07) rotate(-1.0deg);
-  box-shadow: 0 0 22px #c8e6ff99, 0 0 9px #22447777;
 }
 .carousel-caption {
-  text-align: center;
-  font-size: 1.18rem;
-  margin-top: 17px;
-  color: #eae7fa;
-  text-transform: uppercase;
-  font-family: 'Bebas Neue', Arial, sans-serif;
-  letter-spacing: 0.11em;
-  user-select: none;
-  pointer-events: none;
-  text-shadow: 0 1.5px 5px #0c1838cc, 0 1.5px 2px #ffb5f799;
+  display: none;
 }
 
 /* Flèches RECTANGLES transparentes et larges pour facilité mobile */
@@ -248,10 +243,9 @@ main {
   .carousel-arrow { width: 40px; font-size: 1.3em; }
   .carousel-arrow.left { left: -25px;}
   .carousel-arrow.right { right: -25px;}
-  .carousel-caption { font-size: 0.83rem; }
 }
 footer {
-  width: 100%;
+  width: 100vw;
   text-align: center;
   margin-top: auto;
   padding: 24px 0 16px 0;
@@ -262,6 +256,11 @@ footer {
   text-transform: uppercase;
   background: transparent;
   user-select: none;
-  z-index: 4;
-  position: relative;
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(11, 16, 75, 0.7);
+  backdrop-filter: blur(8px);
 }
