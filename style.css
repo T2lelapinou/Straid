@@ -1,5 +1,5 @@
 :root {
-  --gap: 48px; /* Espace identique partout */
+  --gap: 48px;
   --carousel-img-width: 160px;
   --carousel-img-height: 200px;
   --arrow-width: 48px;
@@ -125,7 +125,6 @@ main {
   justify-content: center;
   width: calc(
     var(--carousel-img-width) + 
-    2 * var(--gap) + 
     2 * var(--arrow-width) + 
     2 * var(--gap)
   );
@@ -141,7 +140,6 @@ main {
   position: relative;
   width: calc(
     var(--carousel-img-width) + 
-    2 * var(--gap) + 
     2 * var(--arrow-width)
   );
   height: var(--carousel-img-height);
@@ -153,6 +151,7 @@ main {
 
 .carousel-track {
   position: relative;
+  left: var(--arrow-width);
   width: var(--carousel-img-width);
   height: var(--carousel-img-height);
   display: flex;
@@ -237,10 +236,10 @@ main {
 }
 
 .carousel-arrow.left {
-  left: var(--gap);
+  left: 0;
 }
 .carousel-arrow.right {
-  right: var(--gap);
+  right: 0;
 }
 .carousel-arrow:hover, .carousel-arrow:active {
   background: rgba(200, 220, 255, 0.32);
