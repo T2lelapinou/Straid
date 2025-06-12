@@ -1,5 +1,6 @@
 :root {
   --gap: 48px;
+   --gap-arrow-img: 36px;
   --carousel-img-width: 160px;
   --carousel-img-height: 200px;
   --arrow-width: 48px;
