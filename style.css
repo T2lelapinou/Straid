@@ -1,3 +1,10 @@
+:root {
+  --gap: 48px; /* Espace identique partout */
+  --carousel-img-width: 160px;
+  --carousel-img-height: 200px;
+  --arrow-width: 48px;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -104,7 +111,6 @@ main {
   flex: 1 0 auto;
 }
 
-/* Taille du cadre adaptée au carrousel, hauteurs égales en haut et en bas, taille raisonnable */
 .glass-container {
   background: linear-gradient(135deg, #262b5ed6 0%, #36425ed0 38%, #b6aaf1c5 70%, #2c1d3acc 100%);
   box-shadow: 0 8px 60px 0 rgba(54,80,170,0.28), 0 1.5px 8px 0 rgba(120,0,255,0.12);
@@ -112,7 +118,6 @@ main {
   border: 2.2px solid rgba(255,255,255,0.12);
   backdrop-filter: blur(28px) saturate(160%);
   -webkit-backdrop-filter: blur(28px) saturate(160%);
-  /* Espace partout identique */
   padding: var(--gap);
   display: flex;
   flex-direction: column;
@@ -124,7 +129,6 @@ main {
     2 * var(--arrow-width) + 
     2 * var(--gap)
   );
-  /* image + gap (img/flèche) x2 + flèche x2 + gap (flèche/bord) x2 */
   min-width: 0;
   min-height: calc(var(--carousel-img-height) + 2 * var(--gap));
   box-sizing: border-box;
@@ -233,10 +237,10 @@ main {
 }
 
 .carousel-arrow.left {
-  left: calc(var(--gap));
+  left: var(--gap);
 }
 .carousel-arrow.right {
-  right: calc(var(--gap));
+  right: var(--gap);
 }
 .carousel-arrow:hover, .carousel-arrow:active {
   background: rgba(200, 220, 255, 0.32);
