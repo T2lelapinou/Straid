@@ -147,7 +147,7 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(2.0);
+  transform: translate(-50%, -50%) scale(0.69);
   opacity: 0.14;
   z-index: 1;
   transition: 
@@ -178,22 +178,24 @@ main {
   width: 145px;
   height: 145px;
   object-fit: contain;
-  /* Suppression du cadre arrondi */
   border-radius: 0;
   box-shadow: none;
   background: transparent;
   border: none;
-  filter: brightness(0.98) scale(1.2);
+  /* Zoom x2 */
+  transform: scale(2);
+  filter: brightness(0.98);
   transition: 
     filter 0.5s cubic-bezier(.8,0,.2,1),
     transform 0.5s cubic-bezier(.8,0,.2,1);
 }
 .carousel-slide.active img {
-  filter: brightness(1.13) drop-shadow(0 0 18px #f9e8a988) scale(1.2);
+  filter: brightness(1.13) drop-shadow(0 0 18px #f9e8a988);
+  transform: scale(2);
 }
 .carousel-slide.active img:hover {
-  filter: brightness(1.22) drop-shadow(0 0 22px #ffb5f7cc) scale(1.2);
-  transform: scale(1.07) rotate(-1.0deg);
+  filter: brightness(1.22) drop-shadow(0 0 22px #ffb5f7cc);
+  transform: scale(2.07) rotate(-1.0deg);
 }
 .carousel-caption {
   display: none;
@@ -239,7 +241,7 @@ main {
   header p { font-size: 0.82rem; }
   .glass-container { max-width: 99vw; padding: 8px 1vw 15px 1vw;}
   .carousel { width: 96vw; max-width: 240px; height: 110px;}
-  .carousel-slide img { width: 60px; height: 60px;}
+  .carousel-slide img { width: 60px; height: 60px; transform: scale(2); }
   .carousel-arrow { width: 40px; font-size: 1.3em; }
   .carousel-arrow.left { left: -25px;}
   .carousel-arrow.right { right: -25px;}
