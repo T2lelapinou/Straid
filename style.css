@@ -1,4 +1,3 @@
-```css name=style.css
 html, body {
   height: 100%;
   width: 100%;
@@ -72,14 +71,14 @@ body {
 header {
   width: 100%;
   text-align: center;
-  margin-top: 65px;    /* +20% */
-  margin-bottom: 46px; /* +20% */
+  margin-top: 65px;
+  margin-bottom: 46px;
   z-index: 4;
   position: relative;
 }
 header h1 {
   font-family: 'Bebas Neue', Arial, sans-serif;
-  font-size: 5.04rem; /* +20% */
+  font-size: 5.04rem;
   color: #baccff;
   letter-spacing: 0.13em;
   margin: 0;
@@ -87,7 +86,7 @@ header h1 {
   text-shadow: 0 7.2px 36px #142a42, 0 1.8px 7.2px #ffb5f799;
 }
 header p {
-  font-size: 2.52rem; /* +20% */
+  font-size: 2.52rem;
   color: #c1bfff;
   margin: 12px 0 0 0;
   text-transform: uppercase;
@@ -109,15 +108,15 @@ main {
 .glass-container {
   background: linear-gradient(135deg, #262b5ed6 0%, #36425ed0 38%, #b6aaf1c5 70%, #2c1d3acc 100%);
   box-shadow: 0 9.6px 72px 0 rgba(54,80,170,0.28), 0 1.8px 9.6px 0 rgba(120,0,255,0.12);
-  border-radius: 48px; /* +20% */
-  border: 2.64px solid rgba(255,255,255,0.12); /* +20% */
+  border-radius: 48px;
+  border: 2.64px solid rgba(255,255,255,0.12);
   backdrop-filter: blur(33.6px) saturate(160%);
   -webkit-backdrop-filter: blur(33.6px) saturate(160%);
-  padding: 72px 0; /* +20% */
-  margin: 0 auto 65px auto; /* +20% */
-  max-width: 624px; /* +20% */
-  width: 98vw;
-  min-height: 408px; /* +20% */
+  padding: 72px;
+  max-width: calc(1000px + 2*72px + 2*60px);
+  min-width: calc(1000px + 2*72px + 2*60px);
+  width: auto;
+  min-height: calc(1200px + 2*72px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,8 +128,8 @@ main {
 
 .carousel {
   position: relative;
-  width: 420px;   /* +20% */
-  height: 288px;  /* +20% */
+  width: 1000px;
+  height: 1200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,15 +179,15 @@ main {
   z-index: 2;
 }
 .carousel-slide img {
-  width: 150px;    /* légèrement plus grand qu'avant */
-  height: 150px;
+  width: 150px;
+  height: 180px;
   object-fit: contain;
   border-radius: 0;
   box-shadow: none;
   background: transparent;
   border: none;
-  /* Zoom x2 */
-  transform: scale(2.1); /* agrandi un peu plus (au lieu de 2) */
+  /* Zoom x2.1 */
+  transform: scale(2.1);
   filter: brightness(0.98);
   transition: 
     filter 0.5s cubic-bezier(.8,0,.2,1),
@@ -211,29 +210,29 @@ main {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 60px; /* +20% */
+  width: 60px;
   height: 100%;
   background: rgba(200, 220, 255, 0.16);
   border: none;
   color: #baccff;
-  font-size: 2.4em; /* +20% */
+  font-size: 2.4em;
   cursor: pointer;
   user-select: none;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14.4px; /* +20% */
+  border-radius: 14.4px;
   outline: none;
   transition: background 0.18s, color 0.18s;
   opacity: 0.8;
 }
 .carousel-arrow.left {
-  left: -72px; /* +20% */
+  left: -72px;
   right: auto;
 }
 .carousel-arrow.right {
-  right: -72px; /* +20% */
+  right: -72px;
   left: auto;
 }
 .carousel-arrow:hover, .carousel-arrow:active {
@@ -247,7 +246,7 @@ main {
   header p { font-size: 1rem; }
   .glass-container { max-width: 99vw; padding: 20px 1vw 20px 1vw; min-height: 210px;}
   .carousel { width: 96vw; max-width: 192px; height: 84px;}
-  .carousel-slide img { width: 48px; height: 48px; transform: scale(2);}
+  .carousel-slide img { width: 48px; height: 58px; transform: scale(2.1);}
   .carousel-arrow { width: 29px; font-size: 1.32em; }
   .carousel-arrow.left { left: -10px;}
   .carousel-arrow.right { right: -10px;}
@@ -256,9 +255,9 @@ footer {
   width: 100vw;
   text-align: center;
   margin-top: auto;
-  padding: 28.8px 0 19.2px 0; /* +20% */
+  padding: 28.8px 0 19.2px 0;
   color: #b3b3e5;
-  font-size: 1.48rem; /* +20% */
+  font-size: 1.48rem;
   font-family: 'Bebas Neue', Arial, sans-serif;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -272,4 +271,3 @@ footer {
   background: rgba(11, 16, 75, 0.7);
   backdrop-filter: blur(8px);
 }
-```
